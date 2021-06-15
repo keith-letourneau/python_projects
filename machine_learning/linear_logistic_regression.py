@@ -61,18 +61,6 @@ season_x = glm.predict((np.array([8669, 1753, 589, 7914]).reshape(1, -1)))
 print('Will we win atleast 50 games this season?', 
       season_x)
 
-"""
-Look into why model accuracy is 100%. Data is broken up into train and test so why not sure what is going on there.
-
-Next Steps:
-
-Bootstrap Aggregating
-Practice building ensemble model ultilizing bagging method: 
-      *Create random samples of the training data set (sub sets of training data set) 
-      *Build a model for each sample 
-      *Results of these multiple models are combined using average or majority voting
-"""
-
 #new data
 data = pd.read_csv(r'C:\Users\keith\Downloads\programmers.csv')
 df = DataFrame(data, columns=['experience', 'score', 'salary'])
