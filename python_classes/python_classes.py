@@ -50,7 +50,7 @@ sns.barplot(x=df['Name'], y=df['Goals'])
 plt.xlabel('Player Name')
 plt.ylabel('Goals Scored')
 plt.title('Top NHL Goal Scorers 2021')
-plt.axhline(40, color='red', alpha=.5, ls='--')
+plt.axhline(df['Goals'].mean(), color='red', alpha=.5, ls='--')
 plt.show()
 
 print(Roster.__dict__)
