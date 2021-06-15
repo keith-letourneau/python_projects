@@ -1,25 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# # <center> English to Russian Translator </center>
-# 
-# This script will translate English text to Russian text and save output to .txt file.
-
-#create russian translator function
-from google_trans_new import google_translator  
- 
-def russian_trans(str):
- translator = google_translator() 
- translated = translator.translate(str, lang_src='en', lang_tgt='ru')
- return str + ' // ' + translated
-
-russian_trans("Let's drink some wine!")
-
-# # <center>Translate French News Website to English</center>
-# 
 # This script with translate h1,h2,h3 tags to English, place into list and save as .txt file.
 
-#translate French news website headlines to English
+# Translate French news website headlines to English
+from google_trans_new import google_translator
 import requests
 from bs4 import BeautifulSoup
 import urllib.request
@@ -53,6 +35,15 @@ with open(r'C:\Users\keith\OneDrive\Desktop\Python Scripts\French Headlines.txt'
     my_file.write('French Headlines from Today' + '\n' + '\n')
     for headline in fr_headlines:
         my_file.write(headline + '\n')
+     
+#create russian translator function  
+ 
+def russian_trans(str):
+ translator = google_translator() 
+ translated = translator.translate(str, lang_src='en', lang_tgt='ru')
+ return str + ' // ' + translated
+
+russian_trans("Let's drink some wine!")
      
 #create a list of translations
 ru_text = []
